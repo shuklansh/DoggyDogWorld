@@ -24,6 +24,7 @@ import coil.compose.AsyncImage
 import com.shuklansh.doggydogworld.DogApi.DogAPI
 import com.shuklansh.doggydogworld.DogApi.DogHelper
 import com.shuklansh.doggydogworld.ui.theme.DoggyDogWorldTheme
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 import retrofit2.Retrofit
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = Color.Yellow//MaterialTheme.colors.background
+                    color = Color.LightGray //MaterialTheme.colors.background
                 ) {
                     Column(modifier = Modifier
                         .fillMaxSize()
@@ -54,14 +55,14 @@ class MainActivity : ComponentActivity() {
 
                     ) {
                         Button(onClick = {
-                            scopeCRT.launch{
+                            scopeCRT.async{
                                 linkgetter = showCarIMGLINK()
                             }
                         },
                             elevation = ButtonDefaults.elevation(defaultElevation = 4.dp),
                             modifier = Modifier.clip(RoundedCornerShape(50.dp)),
-                            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Cyan)
-                            ) {
+                            colors = ButtonDefaults.buttonColors(backgroundColor = Color.Yellow)
+                        ) {
                             Text(text = "press to see a doggo", fontSize = 20.sp, textAlign = TextAlign.Center,  // horizontal center of the text
                                 modifier = Modifier.align(Alignment.CenterVertically), color = Color.Black)
 
