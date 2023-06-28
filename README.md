@@ -5,7 +5,8 @@ Random doggo images from API. Retrofit and jetpack compose project
 
 ## Screenshots
 
-![image](https://github.com/shuklansh/DoggyDogWorld/assets/89148178/7408faa0-051c-4df8-bdeb-8fdceb8851b8)
+![image](https://github.com/shuklansh/DoggyDogWorld/assets/89148178/0954a965-f8d1-4b0f-ab68-b9fd6181c11d)
+
 
 
 
